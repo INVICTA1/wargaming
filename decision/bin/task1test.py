@@ -11,4 +11,3 @@ class PifagorTesy(unittest.TestCase):
         self.assertEqual(table_pifagor('15 30'), 6)
         self.assertEqual(table_pifagor('15 120'), 4)
         self.assertEqual(table_pifagor('6 12'), 4)
-
