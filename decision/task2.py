@@ -34,7 +34,7 @@ def add_min_digit_in_list(money, min_price_digit, min_digit):
     return list_digit, money
 
 
-def create_list_with_max_digits(dict_digit, min_price_digit, min_digit, money, list_digit):
+def create_list_with_max_digits(dict_digit, min_price_digit, money, list_digit):
     for i in range(len(list_digit)):
         newmin_price_digit = min_price_digit
         for price, value in dict_digit.items():
@@ -57,7 +57,6 @@ def create_max_digit(list_digit):
 
 
 def tactical_number(money_and_mass_list):
-    print(money_and_mass_list)
     money, mass_list = money_and_mass_list
     dict_digit = create_dict(mass_list)
 
@@ -67,7 +66,7 @@ def tactical_number(money_and_mass_list):
     else:
         min_price_digit, min_digit = min_price_and_digit
     list_digit, money = add_min_digit_in_list(money, min_price_digit, min_digit)
-    list_digit = create_list_with_max_digits(dict_digit, min_price_digit, min_digit, money, list_digit)
+    list_digit = create_list_with_max_digits(dict_digit, min_price_digit, money, list_digit)
     max_number = create_max_digit(list_digit)
     return max_number
 
